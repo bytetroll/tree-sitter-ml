@@ -1,5 +1,5 @@
 module.exports = grammar({
-  name: 'ml_lang',
+  name: 'ml',
 
   extras: $ => [
     /\s/,
