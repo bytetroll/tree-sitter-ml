@@ -27,7 +27,7 @@ module.exports = grammar({
       optional($.type_parameters),
       $.parameters,
       optional(seq('->', $._type)),
-      $.block,
+      repeat($._statement),
       'end',
       'function',
     ),
@@ -156,12 +156,7 @@ module.exports = grammar({
 
     index_expression: $ => prec(11, seq($._expression, '[', $._expression, ']')),
 
-    block: $ => seq(
-      '{',
-      repeat($._statement),
-      optional($._expression),
-      '}',
-    ),
+
 
     string_literal: $ => /"[^"]*"/,
 
