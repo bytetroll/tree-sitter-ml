@@ -1,0 +1,14 @@
+{
+  "name": "tree-sitter-ml",
+  "version": "0.1.0",
+  "description": "Tree-sitter grammar for ML language",
+  "scripts": {
+    "build": "tree-sitter generate",
+    "test": "tree-sitter test"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.6"
+  },
+  "keywords": ["tree-sitter", "ml"],
+  "license": "MIT"
+}

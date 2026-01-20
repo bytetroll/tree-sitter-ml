@@ -1,0 +1,29 @@
+{
+  "grammars": [
+    {
+      "name": "ml",
+      "camelcase": "Ml",
+      "scope": "source.ml",
+      "path": ".",
+      "file-types": ["ml"],
+      "injection-regex": "^ml$"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Tree-sitter grammar for ML language",
+    "authors": ["MLZed Team"],
+    "links": {
+      "repository": "https://github.com/mlzed/tree-sitter-ml"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true
+  }
+}
