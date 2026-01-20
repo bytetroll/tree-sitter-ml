@@ -38,7 +38,7 @@ module.exports = grammar({
       $.identifier,
       optional(seq(':', $._type)),
       optional(seq('=', $._expression)),
-      ';',
+      optional(';'),
     ),
 
     if_statement: $ => seq(
@@ -61,7 +61,7 @@ module.exports = grammar({
       'while',
     ),
 
-    expression_statement: $ => seq($._expression, ';'),
+    expression_statement: $ => seq($._expression, optional(';')),
 
     parameters: $ => seq(
       '(',
@@ -155,8 +155,6 @@ module.exports = grammar({
     field_expression: $ => seq($._expression, '.', $.identifier),
 
     index_expression: $ => prec(11, seq($._expression, '[', $._expression, ']')),
-
-
 
     string_literal: $ => /"[^"]*"/,
 
